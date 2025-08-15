@@ -1,6 +1,6 @@
 # 🧠 Zhang2024 Occlusion Analysis – Project Overview
 
-This repository supports the analysis and evaluation of occlusion effects on facial morphing attack detection systems, based on the architecture proposed by *Zhang et al., 2024* (DOI: [10.1109/CVPRW63382.2024.00158](https://doi.org/10.1109/CVPRW63382.2024.00158)). It uses a **Vision Transformer (ViT)** to extract deep visual features, followed by a **Support Vector Machine (SVM)** classifier to distinguish between bona fide and morphed facial images.
+This repository supports the analysis and evaluation of occlusion effects on facial morphing attack detection systems, based on the architecture proposed by *Zhang et al., 2024* (DOI: [10.1109/CVPRW63382.2024.00158](https://doi.org/10.1109/CVPRW63382.2024.00158)). It uses a **Vision Transformer (ViT)** to extract deep visual features, followed by a **Support Vector Machine (SVM)** classifier to distinguish between bona fide and morphed facial images. The model’s source code is not publicly available and must be requested directly from the authors.
 
 ---
 
