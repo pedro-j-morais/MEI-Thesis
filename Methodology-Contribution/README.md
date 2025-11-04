@@ -122,7 +122,7 @@ Creates visual heatmaps that highlight which facial regions influence the model'
   - `diff` – Shows absolute difference from the regular (baseline) score, highlighting impact of occlusion.
 - **Visual Overlay**:
   - Overlays heatmaps on original images with grid lines, bounding boxes, and cell values.
-  - Uses color gradients to indicate prediction sensitivity (red = high impact, blue = low impact).
+  - Uses color gradients to indicate prediction sensitivity (lighter colors = high impact, darker colors = low impact).
   - Generates PNG heatmaps for grid occlusion, landmark occlusion, and composite visualizations.
 - **Multiprocessing Support**:
   - Efficient processing of large datasets.
