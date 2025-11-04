@@ -1,7 +1,6 @@
-# 🧠 SPL-MAD – Self-Paced Morphing Attack Detection and Error Analysis
+# 🧠 SPL-MAD – Project Overview
 
-This repository supports the experiments and evaluation of the **Self-Paced Learning Morphing Attack Detection (SPL-MAD)** system, proposed by *Fang et al., 2022* (DOI: [10.1109/IJCB54206.2022.10008003](https://doi.org/10.1109/IJCB54206.2022.10008003)).  
-The approach focuses on **unsupervised anomaly detection** for morphing attack detection, where the model learns to distinguish bona fide facial representations from morphs through a **self-paced learning mechanism** — gradually including more challenging samples during training to improve generalization.
+This experiment supports the experiments and evaluation of the **Self-Paced Learning Morphing Attack Detection (SPL-MAD)** system, proposed by *Fang et al., 2022* (DOI: [10.1109/IJCB54206.2022.10008003](https://doi.org/10.1109/IJCB54206.2022.10008003)). The approach focuses on **unsupervised anomaly detection** for morphing attack detection, where the model learns to distinguish bona fide facial representations from morphs through a **self-paced learning mechanism**, gradually including more challenging samples during training to improve generalization.
 
 ---
 
@@ -9,7 +8,7 @@ The approach focuses on **unsupervised anomaly detection** for morphing attack d
 
 ### 1. **`SPL-MAD.ipynb`**
 #### 🔍 Objective:
-Implements the **dataset preparation** and **experimental setup** for SPL-MAD, covering data organization and preprocessing across multiple datasets, including **FRLL-Morphs** and **SMDD**.
+Implements the dataset preparation and experimental setup for SPL-MAD, covering data organization and preprocessing across multiple datasets, including **FRLL-Morphs** and **SMDD**.
 
 #### 🧬 Code Description:
 - **Environment Setup**:
@@ -26,7 +25,7 @@ Implements the **dataset preparation** and **experimental setup** for SPL-MAD, c
 
 ### 2. **`SPL-MAD_ERR-Analysis.ipynb`**
 #### 🔍 Objective:
-Performs **error rate analysis** on experimental results from the SPL-MAD pipeline, focusing on **Equal Error Rate (EER)** and other performance indicators.
+Performs error rate analysis on experimental results from the SPL-MAD pipeline, focusing on **Equal Error Rate (EER)** and other performance indicators.
 
 #### 🧬 Code Description:
 - **Setup**:
@@ -42,13 +41,11 @@ Performs **error rate analysis** on experimental results from the SPL-MAD pipeli
 
 ## 🧪 Suggested Workflow
 
-1. **Dataset Preparation**  
+1. **Dataset Preparation**:
    - Run `SPL-MAD.ipynb` to mount the environment, organize datasets, and generate required CSV metadata.
-
-2. **Model Training & Testing**  
+2. **Model Training & Testing**:
    - Train and evaluate the SPL-MAD system using the prepared data.
-
-3. **Error Analysis**  
+3. **Error Analysis**:
    - Use `SPL-MAD_ERR-Analysis.ipynb` to analyze and visualize EER metrics from experiment logs.
 
 ---
@@ -59,4 +56,5 @@ Performs **error rate analysis** on experimental results from the SPL-MAD pipeli
   - `/MyDrive/mad/code/SPL-MAD/EER Analysis/analyse_logs.py`
   - `/MyDrive/mad/datasets/scripts/frll_morphs_create_csv.py`
 - Ensure that dataset paths and filenames are correctly configured before running.
+
 
