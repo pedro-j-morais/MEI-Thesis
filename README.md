@@ -1,19 +1,19 @@
 # 🎓 Face Morphing Detection in Identification Documents
 
-**Master's Thesis in Informatics Engineering**
-**Specialization in Software Engineering**
+**Master's Thesis in Informatics Engineering**  
+**Specialization in Software Engineering**  
 Instituto Superior de Engenharia de Coimbra (ISEC)
 
-**Author:** Pedro Jorge Fernandes Morais
-**Supervisor:** Inês Campos Monteiro Sabino Domingues
-**Co-Supervisor:** Teresa Raquel Corga Teixeira da Rocha
+**Author:** Pedro Jorge Fernandes Morais  
+**Supervisor:** Inês Campos Monteiro Sabino Domingues  
+**Co-Supervisor:** Teresa Raquel Corga Teixeira da Rocha  
 **Date:** October 2025
 
 ---
 
 ## 📋 Abstract
 
-The falsification of identification documents presents a remarkable threat to public security, personal data protection, and fraud prevention. A growing concern within this domain is the use of **morphed facial images** — a deceptive technique that has become more prevalent with the rapid advancement of artificial intelligence and image processing technologies.
+The falsification of identification documents presents a remarkable threat to public security, personal data protection, and fraud prevention. A growing concern within this domain is the use of **morphed facial images**, a deceptive technique that has become more prevalent with the rapid advancement of artificial intelligence and image processing technologies.
 
 **Morphed images** are created by blending the facial features of two or more individuals to create a composite image that resembles all contributors. This manipulation enables multiple individuals to use a single identification document, for example, to gain unauthorized access across international borders.
 
@@ -209,11 +209,12 @@ The thesis employs comprehensive evaluation metrics:
 
 ## 📞 Contact
 
-**Pedro Jorge Fernandes Morais**
-Instituto Superior de Engenharia de Coimbra (ISEC)
+**Pedro Jorge Fernandes Morais**  
+a21280686@isec.pt  
+Instituto Superior de Engenharia de Coimbra (ISEC)  
 Master's in Informatics Engineering
 
-For questions or collaboration opportunities, please open an issue in this repository.
+For questions or collaboration opportunities, please send an email.
 
 ---
 
@@ -222,8 +223,7 @@ For questions or collaboration opportunities, please open an issue in this repos
 If you use this work in your research, please cite:
 
 ```
-Morais, P. J. F. (2025). Face Morphing Detection in Identification Documents.
-Master's Thesis, Instituto Superior de Engenharia de Coimbra.
+TBD
 ```
 
 ---
@@ -233,7 +233,7 @@ Master's Thesis, Instituto Superior de Engenharia de Coimbra.
 Special thanks to:
 - Supervisor: Inês Campos Monteiro Sabino Domingues
 - Co-Supervisor: Teresa Raquel Corga Teixeira da Rocha
-- Authors who shared their implementations: Fang et al., Zhang et al.
+- Authors who shared their implementations: Fang et al. (2022), Medvedev et al. (2023), Colbois et al. (2024), and Zhang et al. (2024)
 - Instituto Superior de Engenharia de Coimbra (ISEC)
 
 ---
