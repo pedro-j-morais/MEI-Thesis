@@ -1,6 +1,6 @@
 # 🧠 SPL-MAD – Project Overview
 
-This experiment supports the experiments and evaluation of the **Self-Paced Learning Morphing Attack Detection (SPL-MAD)** system, proposed by *Fang et al., 2022* (DOI: [10.1109/IJCB54206.2022.10008003](https://doi.org/10.1109/IJCB54206.2022.10008003)). The approach focuses on **unsupervised anomaly detection** for morphing attack detection, where the model learns to distinguish bona fide facial representations from morphs through a **self-paced learning mechanism** — gradually including more challenging samples during training to improve generalization.
+This experiment supports the experiments and evaluation of the **Self-Paced Learning Morphing Attack Detection (SPL-MAD)** system, proposed by *Fang et al., 2022* (DOI: [10.1109/IJCB54206.2022.10008003](https://doi.org/10.1109/IJCB54206.2022.10008003)). The approach focuses on **unsupervised anomaly detection** for morphing attack detection, where the model learns to distinguish bona fide facial representations from morphs through a **self-paced learning mechanism**, gradually including more challenging samples during training to improve generalization.
 
 ---
 
@@ -56,4 +56,5 @@ Performs error rate analysis on experimental results from the SPL-MAD pipeline, 
   - `/MyDrive/mad/code/SPL-MAD/EER Analysis/analyse_logs.py`
   - `/MyDrive/mad/datasets/scripts/frll_morphs_create_csv.py`
 - Ensure that dataset paths and filenames are correctly configured before running.
+
 
