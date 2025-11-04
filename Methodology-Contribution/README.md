@@ -111,32 +111,47 @@ The script expects three types of CSV files, each with a different structure:
    - Format: `image_path,score[,label]`
    - Example:
      ```
-     /path/to/image1.png,0.85,bona_fide
-     /path/to/image2.png,0.23,morph
+     /path/to/dataset/subfolder/image1.png,0.85,1
+     /path/to/dataset/another/path/image2.png,0.23,0
      ```
    - Contains baseline predictions on original (non-occluded) images
+   - Label: `0` = morph, `1` = bona fide
 
 2. **Grid Scores CSV** (`--grid`):
    - Format: `occluded_image_path,score[,label]`
    - Example:
      ```
-     /path/to/dataset/r0_c0/image1.png,0.72,bona_fide
-     /path/to/dataset/row1_col2/image1.png,0.81,bona_fide
-     /path/to/dataset/cell_3_5/image2.png,0.15,morph
+     /path/to/dataset/r0_c0/subfolder/image1.png,0.72,1
+     /path/to/dataset/row1_col2/subfolder/image1.png,0.81,1
+     /path/to/dataset/cell_3_5/another/path/image2.png,0.15,0
      ```
-   - Path must contain grid cell indices in formats like: `r0_c0`, `row1_col2`, `cell_3_5`, `0_1`
+   - Path structure: `/base/path/{grid_cell}/common_path/image.png`
+   - The `common_path/image.png` after the grid cell folder must match the corresponding path in the regular scores CSV
+   - Grid cell indices can be in formats like: `r0_c0`, `row1_col2`, `cell_3_5`, `0_1`
    - Each row represents a prediction when a specific grid cell is occluded
+   - Label: `0` = morph, `1` = bona fide
 
 3. **Landmark Scores CSV** (`--landmark`):
    - Format: `occluded_image_path,score[,label]`
    - Example:
      ```
-     /path/to/dataset/left_eye/image1.png,0.65,bona_fide
-     /path/to/dataset/nose/image1.png,0.78,bona_fide
-     /path/to/dataset/mouth/image2.png,0.12,morph
+     /path/to/dataset/left_eye/subfolder/image1.png,0.65,1
+     /path/to/dataset/nose/subfolder/image1.png,0.78,1
+     /path/to/dataset/mouth/another/path/image2.png,0.12,0
      ```
-   - Path must contain landmark region names: `left_eye`, `right_eye`, `nose`, `mouth`, `jaw`, `eyebrows`, etc.
+   - Path structure: `/base/path/{landmark_region}/common_path/image.png`
+   - The `common_path/image.png` after the landmark region folder must match the corresponding path in the regular scores CSV
+   - Landmark region names: `left_eye`, `right_eye`, `nose`, `mouth`, `jaw`, `eyebrows`, `chin`, `forehead`, etc.
    - Each row represents a prediction when a specific facial landmark region is occluded
+   - Label: `0` = morph, `1` = bona fide
+
+**Path Matching Example:**
+```
+Regular:  /dataset/bonafide/subject001/image.png,0.85,1
+Grid:     /dataset/r2_c3/bonafide/subject001/image.png,0.72,1
+Landmark: /dataset/left_eye/bonafide/subject001/image.png,0.65,1
+```
+The script matches `bonafide/subject001/image.png` across all three files to associate the occluded predictions with the baseline.
 
 #### 🧬 Code Description:
 - **Flexible Score Parsing**:
