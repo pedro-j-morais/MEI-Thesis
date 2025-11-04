@@ -104,6 +104,40 @@ python occlusion_dataset_builder.py \
 #### 🔍 Objective:
 Creates visual heatmaps that highlight which facial regions influence the model's predictions the most, combining grid and landmark occlusion scores into composite visualizations overlaid on original images.
 
+#### 📄 CSV File Structure:
+The script expects three types of CSV files, each with a different structure:
+
+1. **Regular Scores CSV** (`--regular`):
+   - Format: `image_path,score[,label]`
+   - Example:
+     ```
+     /path/to/image1.png,0.85,bona_fide
+     /path/to/image2.png,0.23,morph
+     ```
+   - Contains baseline predictions on original (non-occluded) images
+
+2. **Grid Scores CSV** (`--grid`):
+   - Format: `occluded_image_path,score[,label]`
+   - Example:
+     ```
+     /path/to/dataset/r0_c0/image1.png,0.72,bona_fide
+     /path/to/dataset/row1_col2/image1.png,0.81,bona_fide
+     /path/to/dataset/cell_3_5/image2.png,0.15,morph
+     ```
+   - Path must contain grid cell indices in formats like: `r0_c0`, `row1_col2`, `cell_3_5`, `0_1`
+   - Each row represents a prediction when a specific grid cell is occluded
+
+3. **Landmark Scores CSV** (`--landmark`):
+   - Format: `occluded_image_path,score[,label]`
+   - Example:
+     ```
+     /path/to/dataset/left_eye/image1.png,0.65,bona_fide
+     /path/to/dataset/nose/image1.png,0.78,bona_fide
+     /path/to/dataset/mouth/image2.png,0.12,morph
+     ```
+   - Path must contain landmark region names: `left_eye`, `right_eye`, `nose`, `mouth`, `jaw`, `eyebrows`, etc.
+   - Each row represents a prediction when a specific facial landmark region is occluded
+
 #### 🧬 Code Description:
 - **Flexible Score Parsing**:
   - Supports "regular", "grid", and "landmark" score files in CSV-like format.
