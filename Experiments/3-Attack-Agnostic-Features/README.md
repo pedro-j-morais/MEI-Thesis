@@ -28,7 +28,7 @@ Attempts to replicate the attack-agnostic feature extraction and MAD evaluation 
 - **Remove Inactive or Broken Extractors**:
   - Disables nonfunctional extractors that caused runtime errors during data processing and feature extraction.
 - **Install Conda Environment (via CondaColab)**:
-  - Uses `condacolab` to replicate the dependency environment defined in the Colbois et al. implementation.
+  - Uses `condacolab` to replicate the dependency environment defined in the Colbois et al. (2024) implementation.
   - Several dependency mismatches and outdated package versions led to persistent installation failures.
 - **Pipeline Execution Attempt**:
   - Attempts to execute the main experimental pipeline after configuration.
@@ -59,3 +59,4 @@ Attempts to replicate the attack-agnostic feature extraction and MAD evaluation 
   - Unavailability of the regenerated **FRLL-Morphs** dataset required for complete evaluation.
 - While the notebook successfully documents the setup and partial configuration process, the pipeline cannot be executed end-to-end.
 - Designed for execution in **Google Colab** environments.
+
