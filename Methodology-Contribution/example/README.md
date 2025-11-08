@@ -6,7 +6,7 @@ This folder contains **Google Colab notebooks** demonstrating the practical usag
 
 ## 📁 Notebook Summaries
 
-### 1. **`TESE-Crop-Dataset-Builder.ipynb`**
+### 1. **`THESIS-Crop-Dataset-Builder.ipynb`**
 #### 🔍 Objective:
 Demonstrates how to use `crop_dataset_builder.py` to detect faces and crop them to a standardized size using MTCNN face detection in a Google Colab environment.
 
@@ -34,7 +34,7 @@ Demonstrates how to use `crop_dataset_builder.py` to detect faces and crop them 
 
 ---
 
-### 2. **`TESE-Occlusion-Dataset-Builder.ipynb`**
+### 2. **`THESIS-Occlusion-Dataset-Builder.ipynb`**
 #### 🔍 Objective:
 Demonstrates how to use `occlusion_dataset_builder.py` to generate occluded versions of facial images using both grid-based and landmark-based occlusion methods.
 
@@ -63,7 +63,7 @@ Demonstrates how to use `occlusion_dataset_builder.py` to generate occluded vers
 
 ---
 
-### 3. **`TESE-Occlusion-Heatmaps-Builder.ipynb`**
+### 3. **`THESIS-Occlusion-Heatmaps-Builder.ipynb`**
 #### 🔍 Objective:
 Demonstrates how to use `occlusion_heatmaps_builder.py` to generate interpretability heatmaps from model prediction scores on regular, grid-occluded, and landmark-occluded images.
 
@@ -102,11 +102,11 @@ See the main [Methodology-Contribution README](../README.md#-csv-file-structure)
 Follow this sequence to reproduce the complete occlusion-based interpretability pipeline:
 
 1. **Crop Dataset**:
-   - Run `TESE-Crop-Dataset-Builder.ipynb` to standardize face images.
+   - Run `THESIS-Crop-Dataset-Builder.ipynb` to standardize face images.
    - Download and extract the cropped dataset zip from Google Drive.
 
 2. **Generate Occlusions**:
-   - Run `TESE-Occlusion-Dataset-Builder.ipynb` on the cropped dataset.
+   - Run `THESIS-Occlusion-Dataset-Builder.ipynb` on the cropped dataset.
    - Download and extract the occluded dataset zip from Google Drive.
 
 3. **Run Model Predictions**:
@@ -117,7 +117,7 @@ Follow this sequence to reproduce the complete occlusion-based interpretability 
    - Save predictions as CSV files following the required format.
 
 4. **Generate Heatmaps**:
-   - Run `TESE-Occlusion-Heatmaps-Builder.ipynb` with the three prediction CSV files.
+   - Run `THESIS-Occlusion-Heatmaps-Builder.ipynb` with the three prediction CSV files.
    - Analyze the generated heatmaps to understand model behavior.
 
 ---
